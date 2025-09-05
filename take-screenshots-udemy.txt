@@ -1,0 +1,8 @@
+Using Browser Developer Tools
+This method works best for bypassing Udemy's black screen issue. 
+1. Open Developer Tools:
+In your Chrome browser, press Ctrl + Shift + J (Windows/Linux) or Cmd + Option + J (macOS) to open the developer console.
+2. Open Command Palette:
+Press Ctrl + Shift + P (Windows/Linux) or Cmd + Shift + P (macOS) to open the command palette.
+3. Find the Screenshot Tool:
+Type "Screenshot" in the command palette and select the "Capture area screenshot" option.

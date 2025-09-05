@@ -2,4 +2,3 @@
 
 ## buid process
 
-![alt text](build-process.png)
