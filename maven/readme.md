@@ -32,8 +32,8 @@ apt search jdk | grep 17
 ```
 > in the list look for 'opnejdk-<version>-jdk
 
-* We can install multiple version of JDK and can switch between them as per the requirement
-[_Different java versions_](#different-java-versions)
+* [_Different java versions_](#different-java-versions) (JDKs) can be installed and can switch between them as per the requirement
+
 
 ```
 apt install openjdk-<version>-jdk -y
@@ -48,7 +48,7 @@ java -version
 ```
 apt install maven -y
 ```
-> Different maven versions can also be installed but it is not so straight forward as java, we need to download the binaries, unzip and use it. [_Different maven versions_](#different-maven-versions)
+> [_Different maven versions_](#different-maven-versions) can also be installed but it is not so straight forward as java, we need to download the binaries, unzip and use it.
 
 
 * check the version
