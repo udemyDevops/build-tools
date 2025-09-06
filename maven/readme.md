@@ -33,17 +33,13 @@ apt search jdk | grep 17
 > in the list look for 'opnejdk-<version>-jdk
 
 * We can install multiple version of JDK and can switch between them as per the requirement
+[_Different java versions_](#different-java-versions)
 
 ```
 apt install openjdk-<version>-jdk -y
 ```
 > eg: apt install openjdk-21-jdk -y
 
-> eg: apt install openjdk-17-jdk -y
-
-> To switch between the java versions use the below command and enter the selection number
-
->'sudo update-alternatives --config java'
 * To check the version
 ```
 java -version
@@ -52,6 +48,9 @@ java -version
 ```
 apt install maven -y
 ```
+> Different maven versions can also be installed but it is not so straight forward as java, we need to download the binaries, unzip and use it. [_Different maven versions_](#different-maven-versions)
+
+
 * check the version
 ```
 mvn -version
@@ -160,3 +159,67 @@ rm -rf ~/.m2/repository/*
 :wq
 ```
 > Now run 'mvn install'. Build might get success but can see error while instrumenting ****** with jacoco (compatibility issue of jacoco version with java 21 used for this)
+
+
+### Using different versions of Maven and Java
+
+#### Different java versions
+
+* Install the required JDK versions
+```
+apt install <jdk> -y
+```
+
+> eg: apt install openjdk-21-jdk -y
+
+> eg: apt install openjdk-17-jdk -y
+
+* To switch between the java versions use the below command and enter the selection number
+
+```
+sudo update-alternatives --config java'
+```
+
+#### Different maven versions
+
+> To have mulitple maven version it is not so straight forward as java, we need to download the binaries, unzip and use it
+'https://archive.apache.org/dist/maven/maven-3/'
+
+```
+cd /tmp
+```
+
+```
+wget <zip file link>
+```
+
+> eg: wget https://archive.apache.org/dist/maven/maven-3/3.9.9/binaries/apache-maven-3.9.9-bin.tar.gz
+
+```
+ls /tmp/
+```
+
+* unzip the tar.gz file 
+```
+tar -xzvf <.tar.gz file>
+```
+
+```
+mv <unzipped folder> /usr/local/bin/<mavenversion>
+```
+
+```
+ls /usr/local/bin/<mavenversion>/
+```
+>should see 'bin' folder in which we have the 'mvn' command for the downloaded version
+
+* Check the other version of the maven downloaded
+```
+/usr/local/bin/<mavenversion>/bin/mvn -version
+```
+
+* To use this version to build the code 
+```
+/usr/local/bin/<mavenversion>/bin/mvn install
+```
+> if we don't use the complete path it will use the default version of maven
