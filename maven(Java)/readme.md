@@ -223,3 +223,38 @@ ls /usr/local/bin/<mavenversion>/
 /usr/local/bin/<mavenversion>/bin/mvn install
 ```
 > if we don't use the complete path it will use the default version of maven
+
+
+### Building in AWS Cloud Shell
+
+```
+cat /etc/os-release
+```
+> if it is Amazon-linux, it is based on 'rpm' -- we can use 'yum' or 'dnf'
+
+```
+sudo dnf search java | grep 21
+```
+> in ubuntu package name is JDK but in rpm it is 'java'
+
+```
+sudo dnf install <java-21-xxx> -y
+```
+
+```
+sudo dnf install maven -y
+```
+
+```
+git clone https://github.com/hkhcoder/vprofile-project.git
+```
+
+```
+ls
+```
+```
+cd vprofile-project
+```
+```
+mvn install
+```
