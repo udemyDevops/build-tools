@@ -41,7 +41,7 @@ apt install openjdk-<version>-jdk -y
 
 > eg: apt install openjdk-17-jdk -y
 
-> To swith between the java versions use the below command and enter the selection number
+> To switch between the java versions use the below command and enter the selection number
 
 >'sudo update-alternatives --config java'
 * To check the version
